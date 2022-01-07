@@ -1,0 +1,28 @@
+
+- name: Update web servers
+  hosts: Web
+  
+  tasks:
+  - name: Create a new dir Edureka
+    file:
+      path: /home/centos/Edureka
+      state: directory
+
+- name: Update Db servers
+  hosts: Db
+
+  tasks:
+  - name: Create a new Helloworld.txt
+    copy:
+      dest: /home/centos/Helloworld.txt
+      content: Hello_my_amazing_students
+
+- name: Update App servers
+  hosts: App
+
+  tasks:
+  - name: Download url
+    get_url:
+      dest: /home/centos
+      url: https://filesamples.com/samples/document/txt/sample1.txt
+

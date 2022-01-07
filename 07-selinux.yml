@@ -1,0 +1,17 @@
+
+- name: Update All servers
+  hosts: all
+  become: yes
+ 
+  tasks:
+  - name: Modify Selinux
+    selinux:
+      policy: targeted
+      state: permissive
+
+  - name: Restart httpd
+    service:
+      name: httpd
+      state: restarted
+
+

@@ -1,0 +1,17 @@
+
+- name: Update All servers
+  hosts: all
+  become: yes
+ 
+  tasks:
+  - name: Install git
+    package:
+      name: git
+      state: present
+
+  - name: Deploy ecomm
+    git:
+      dest: /var/www/html
+      repo: https://github.com/Akiranred/ecomm.git
+
+

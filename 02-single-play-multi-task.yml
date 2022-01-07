@@ -1,0 +1,26 @@
+---
+- name: Update web servers
+  hosts: all
+  
+  tasks:
+  - name: Create a new dir Web1,Db1,App1,Mix1
+    file:
+      path: /home/centos/Web1
+      state: directory
+
+  - name: Create a new dir Web1,Db1,App1,Mix1
+    file:
+      path: /home/centos/Db1
+      state: directory
+
+  - name: Create a new dir Web1,Db1,App1,Mix1
+    file:
+      path: /home/centos/App1
+      state: directory
+
+  - name: Create a new dir Web1,Db1,App1,Mix1
+    file:
+      path: /home/centos/Mix1
+      state: directory
+...
+

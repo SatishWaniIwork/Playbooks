@@ -1,0 +1,11 @@
+---
+- name: Update web servers
+  hosts: Web
+  
+  tasks:
+  - name: Create a new dir
+    file:
+      path: /home/centos/Play-dir
+      state: directory
+...
+
